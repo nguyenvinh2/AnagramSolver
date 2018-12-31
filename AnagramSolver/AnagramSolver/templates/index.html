@@ -7,9 +7,15 @@
     <h2>Anagram Solver</h2>
     <h6>Enter a word to find all possible Anagrams based on Oxford's Dictionary </h6>
     <form action="{{ url_for('anagram') }}" method="post">
-      <input type="text" name="getWord"/>
+      <input type="text" name="getWord" />
       <button type="submit">Find Anagram</button>
     </form>
+
+    <ul>
+      {% for elem in anagrams %}
+      <li>{{ elem }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 

@@ -5,6 +5,7 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import render_template
 from AnagramSolver import app
+from flask import Flask, request
 
 	#09e0e9b5
 
@@ -29,8 +30,8 @@ def home():
 @app.route('/anagram', methods=['POST'])
 def anagram():
   word = request.form['getWord']
+  get_anagram = find_anagram(word)
   return render_template('index.html',
-    title='Home Page',)
-
-yessir = find_anagram("this")
-print(yessir)
+    title='Home Page',
+    anagrams = get_anagram,
+    year=datetime.now().year,)
