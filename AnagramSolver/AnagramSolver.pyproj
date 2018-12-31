@@ -40,6 +40,7 @@
     <Folder Include="AnagramSolver\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AnagramSolver\templates\layout.html" />
     <Content Include="requirements.txt" />
     <Content Include="AnagramSolver\static\content\bootstrap.css" />
     <Content Include="AnagramSolver\static\content\bootstrap.min.css" />
