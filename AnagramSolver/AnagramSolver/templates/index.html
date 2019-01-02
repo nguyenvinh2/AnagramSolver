@@ -11,11 +11,9 @@
       <button type="submit">Find Anagram</button>
     </form>
 
-    <ul>
-      {% for elem in anagrams %}
-      <li>{{ elem }}</li>
-      {% endfor %}
-    </ul>
+    {% for elem in anagrams %}
+    <p>{{ elem.word.capitalize() }}: {{elem.definition}}</p>
+    {% endfor %}
   </div>
 </div>
 
