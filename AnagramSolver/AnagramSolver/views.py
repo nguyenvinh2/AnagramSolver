@@ -46,12 +46,13 @@ def anagram():
     wordList.append(Word(eachword, dictionary(eachword)))
   return render_template('index.html',
     title = 'Home Page',
+    word = word,
     year = datetime.now().year,
     anagrams = wordList)
 
 def dictionary(word):
-  app_id = 'hh'
-  app_key = 'll'
+  app_id = 'Your Oxford API ID'
+  app_key = 'You Oxford API KEY'
   language = 'en'
   url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/' + language + '/' + word.lower()
 

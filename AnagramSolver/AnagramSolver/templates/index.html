@@ -7,10 +7,13 @@
     <h2>Anagram Solver</h2>
     <h6>Enter a word to find all possible Anagrams based on Oxford's Dictionary </h6>
     <form action="{{ url_for('anagram') }}" method="post">
-      <input type="text" name="getWord" />
+      <input type="text" name="getWord" placeholder="{{word}}"/>
       <button type="submit">Find Anagram</button>
     </form>
-
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 text-center">
     {% for elem in anagrams %}
     <p>{{ elem.word.capitalize() }}: {{elem.definition}}</p>
     {% endfor %}
